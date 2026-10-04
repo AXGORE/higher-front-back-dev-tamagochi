@@ -1,9 +1,9 @@
 import os
 
 from game.models import Food, Medicine
-from game.tamagochi import AbstractTamagochi
-from game.clicker import AbstractClicker
-from game.game import AbstractGame
+from game.tamagochi import Tamagochi
+from game.clicker import Clicker
+from game.game import Game
 
 
 def main():
@@ -19,15 +19,15 @@ def main():
 
     #  Вместо AbstractTamagochi импортируйте
     #  и создайте инстанс от своей реализации
-    tamagochi = AbstractTamagochi()
+    tamagochi = Tamagochi()
 
     #  Вместо AbstractClicker импортируйте
     #  и создайте инстанс от своей реализации
-    clicker = AbstractClicker(10, 20)
+    clicker = Clicker(10)
 
     #  Вместо AbstractGame импортируйте
     #  и создайте инстанс от своей реализации
-    game = AbstractGame(
+    game = Game(
         tamagochi,
         clicker,
         all_food=all_food,
@@ -85,7 +85,7 @@ def main():
             case _:
                 output = "Неверная команда"
 
-        os.system('clear')
+        os.system('cls' if os.name == 'nt' else 'clear')
 
 
 if __name__ == "__main__":
