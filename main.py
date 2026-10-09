@@ -99,7 +99,7 @@ def main() -> None:
                     output = "Неверная команда"
     except TamagochiIsGone as error:
         output = str(error)
-        print("\n".join([output]))
+        print(output)
 
 
 if __name__ == "__main__":

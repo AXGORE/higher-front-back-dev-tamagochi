@@ -4,10 +4,10 @@ from abc import ABC, abstractmethod
 from copy import copy
 from typing import Any, TypeVar
 
-from .tamagochi import AbstractTamagochi
 from .clicker import AbstractClicker
-from .models import Food, Medicine
 from .exceptions import NotEnoughMoney, TamagochiIsGone
+from .models import Food, Medicine
+from .tamagochi import AbstractTamagochi
 
 InventoryItem = TypeVar("InventoryItem", Food, Medicine)
 
